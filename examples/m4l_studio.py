@@ -51,6 +51,24 @@ jweb_browser = place_raw({
 }, 30, 30)
 
 # ============================================================
+# NODE SCRIPT (receives base64 from jweb, saves .amxd to Desktop)
+# ============================================================
+
+node_save = place_raw({
+    "box": {
+        "maxclass": "newobj",
+        "text": "node.script save_device.js",
+        "numinlets": 1,
+        "numoutlets": 2,
+        "outlettype": ["", ""],
+        "patching_rect": [500.0, 30.0, 160.0, 22.0]
+    }
+}, 500, 30)
+
+# jweb outlet → node.script inlet
+patch.connect([jweb_browser.outs[0], node_save.ins[0]])
+
+# ============================================================
 # TRANSPARENT AUDIO PASSTHROUGH (off-screen in presentation)
 # ============================================================
 

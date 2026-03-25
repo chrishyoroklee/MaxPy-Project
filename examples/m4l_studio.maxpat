@@ -77,6 +77,25 @@
       {
         "box": {
           "maxclass": "newobj",
+          "text": "node.script save_device.js",
+          "numinlets": 1,
+          "numoutlets": 2,
+          "outlettype": [
+            "",
+            ""
+          ],
+          "patching_rect": [
+            500.0,
+            30.0,
+            160.0,
+            22.0
+          ],
+          "id": "obj-2"
+        }
+      },
+      {
+        "box": {
+          "maxclass": "newobj",
           "numinlets": 2,
           "numoutlets": 2,
           "outlettype": [
@@ -90,7 +109,7 @@
             22.0
           ],
           "text": "plugin~",
-          "id": "obj-2"
+          "id": "obj-3"
         }
       },
       {
@@ -106,7 +125,7 @@
             22.0
           ],
           "text": "plugout~",
-          "id": "obj-3"
+          "id": "obj-4"
         }
       }
     ],
@@ -114,11 +133,11 @@
       {
         "patchline": {
           "destination": [
-            "obj-3",
+            "obj-2",
             0
           ],
           "source": [
-            "obj-2",
+            "obj-1",
             0
           ],
           "midpoints": [
@@ -129,11 +148,26 @@
       {
         "patchline": {
           "destination": [
+            "obj-4",
+            0
+          ],
+          "source": [
             "obj-3",
+            0
+          ],
+          "midpoints": [
+            null
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "destination": [
+            "obj-4",
             1
           ],
           "source": [
-            "obj-2",
+            "obj-3",
             1
           ],
           "midpoints": [
