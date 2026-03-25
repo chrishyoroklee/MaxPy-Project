@@ -38,7 +38,7 @@
     "boxanimatetime": 200,
     "enablehscroll": 1,
     "enablevscroll": 1,
-    "devicewidth": 800.0,
+    "devicewidth": 400.0,
     "description": "",
     "digest": "",
     "tags": "",
@@ -58,15 +58,15 @@
           "patching_rect": [
             30.0,
             30.0,
-            800.0,
-            650.0
+            400.0,
+            300.0
           ],
           "presentation": 1,
           "presentation_rect": [
             0.0,
             0.0,
-            800.0,
-            650.0
+            400.0,
+            300.0
           ],
           "url": "https://maxpy-studio.vercel.app/?embedded=true",
           "rendermode": 0,
