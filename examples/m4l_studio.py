@@ -44,11 +44,41 @@ jweb_browser = place_raw({
         "patching_rect": [30.0, 30.0, 400.0, 300.0],
         "presentation": 1,
         "presentation_rect": [0.0, 0.0, 400.0, 300.0],
-        "url": "https://maxpy-studio.vercel.app/?embedded=true",
         "rendermode": 0,
         "disablefind": 1
     }
 }, 30, 30)
+
+# ============================================================
+# LOAD LOCAL WRAPPER (loadbang → read studio_wrapper.html → jweb)
+# ============================================================
+
+loadbang = place_raw({
+    "box": {
+        "maxclass": "newobj",
+        "text": "loadbang",
+        "numinlets": 1,
+        "numoutlets": 1,
+        "outlettype": ["bang"],
+        "patching_rect": [500.0, 200.0, 58.0, 22.0]
+    }
+}, 500, 200)
+
+read_msg = place_raw({
+    "box": {
+        "maxclass": "message",
+        "text": "read studio_wrapper.html",
+        "numinlets": 2,
+        "numoutlets": 1,
+        "outlettype": [""],
+        "patching_rect": [500.0, 230.0, 145.0, 22.0]
+    }
+}, 500, 230)
+
+patch.connect(
+    [loadbang.outs[0], read_msg.ins[0]],
+    [read_msg.outs[0], jweb_browser.ins[0]],
+)
 
 # ============================================================
 # NODE SCRIPT (receives base64 from jweb, saves .amxd to Desktop)

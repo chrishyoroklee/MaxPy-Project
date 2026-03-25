@@ -68,10 +68,45 @@
             400.0,
             300.0
           ],
-          "url": "https://maxpy-studio.vercel.app/?embedded=true",
           "rendermode": 0,
           "disablefind": 1,
           "id": "obj-1"
+        }
+      },
+      {
+        "box": {
+          "maxclass": "newobj",
+          "text": "loadbang",
+          "numinlets": 1,
+          "numoutlets": 1,
+          "outlettype": [
+            "bang"
+          ],
+          "patching_rect": [
+            500.0,
+            200.0,
+            58.0,
+            22.0
+          ],
+          "id": "obj-2"
+        }
+      },
+      {
+        "box": {
+          "maxclass": "message",
+          "text": "read studio_wrapper.html",
+          "numinlets": 2,
+          "numoutlets": 1,
+          "outlettype": [
+            ""
+          ],
+          "patching_rect": [
+            500.0,
+            230.0,
+            145.0,
+            22.0
+          ],
+          "id": "obj-3"
         }
       },
       {
@@ -90,7 +125,7 @@
             160.0,
             22.0
           ],
-          "id": "obj-2"
+          "id": "obj-4"
         }
       },
       {
@@ -109,7 +144,7 @@
             22.0
           ],
           "text": "plugin~",
-          "id": "obj-3"
+          "id": "obj-5"
         }
       },
       {
@@ -125,7 +160,7 @@
             22.0
           ],
           "text": "plugout~",
-          "id": "obj-4"
+          "id": "obj-6"
         }
       }
     ],
@@ -133,7 +168,7 @@
       {
         "patchline": {
           "destination": [
-            "obj-2",
+            "obj-4",
             0
           ],
           "source": [
@@ -148,7 +183,22 @@
       {
         "patchline": {
           "destination": [
-            "obj-4",
+            "obj-3",
+            0
+          ],
+          "source": [
+            "obj-2",
+            0
+          ],
+          "midpoints": [
+            null
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "destination": [
+            "obj-1",
             0
           ],
           "source": [
@@ -163,11 +213,26 @@
       {
         "patchline": {
           "destination": [
-            "obj-4",
+            "obj-6",
+            0
+          ],
+          "source": [
+            "obj-5",
+            0
+          ],
+          "midpoints": [
+            null
+          ]
+        }
+      },
+      {
+        "patchline": {
+          "destination": [
+            "obj-6",
             1
           ],
           "source": [
-            "obj-3",
+            "obj-5",
             1
           ],
           "midpoints": [
