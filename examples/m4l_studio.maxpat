@@ -68,7 +68,7 @@
             400.0,
             300.0
           ],
-          "url": "https://maxpy-studio.vercel.app/?embedded=true",
+          "url": "https://maxpy-studio.vercel.app/?embedded=true&v=3",
           "rendermode": 0,
           "disablefind": 1,
           "id": "obj-1"

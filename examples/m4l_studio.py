@@ -44,7 +44,7 @@ jweb_browser = place_raw({
         "patching_rect": [30.0, 30.0, 400.0, 300.0],
         "presentation": 1,
         "presentation_rect": [0.0, 0.0, 400.0, 300.0],
-        "url": "https://maxpy-studio.vercel.app/?embedded=true",
+        "url": "https://maxpy-studio.vercel.app/?embedded=true&v=3",
         "rendermode": 0,
         "disablefind": 1
     }
