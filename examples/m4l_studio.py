@@ -41,9 +41,9 @@ jweb_browser = place_raw({
         "numinlets": 1,
         "numoutlets": 1,
         "outlettype": [""],
-        "patching_rect": [30.0, 30.0, 600.0, 450.0],
+        "patching_rect": [30.0, 30.0, 800.0, 650.0],
         "presentation": 1,
-        "presentation_rect": [0.0, 0.0, 600.0, 450.0],
+        "presentation_rect": [0.0, 0.0, 800.0, 650.0],
         "url": "https://maxpy-studio.vercel.app/?embedded=true",
         "rendermode": 0,
         "disablefind": 1
@@ -87,7 +87,7 @@ patch.connect(
 
 patcher_json = patch.get_json()
 patcher_json["patcher"]["openinpresentation"] = 1
-patcher_json["patcher"]["devicewidth"] = 600.0
+patcher_json["patcher"]["devicewidth"] = 800.0
 
 with open("examples/m4l_studio.maxpat", "w") as f:
     json.dump(patcher_json, f, indent=2)
